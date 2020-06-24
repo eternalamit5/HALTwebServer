@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bb294195-9cdf-4c85-a9b2-bf2e81f9992e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1dZyXm7m9gBz4VattkpTSnfHIxG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RunManager">
+    <configuration name="server" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="HALTwebServer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3.6" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/server.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.server" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bb294195-9cdf-4c85-a9b2-bf2e81f9992e" name="Default Changelist" comment="" />
+      <created>1592646952464</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1592646952464</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="448" y="208" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593023138845">
+      <screen x="69" y="37" width="1851" height="1043" />
+    </state>
+    <state x="448" y="208" key="#com.intellij.execution.impl.EditConfigurationsDialog/69.37.1851.1043@69.37.1851.1043" timestamp="1593023138845" />
+    <state x="563" y="47" width="853" height="1021" key="#server" timestamp="1593023101937">
+      <screen x="69" y="37" width="1851" height="1043" />
+    </state>
+    <state x="563" y="47" width="853" height="1021" key="#server/69.37.1851.1043@69.37.1851.1043" timestamp="1593023101937" />
+    <state width="1821" height="191" key="GridCell.Tab.0.bottom" timestamp="1593030208191">
+      <screen x="69" y="37" width="1851" height="1043" />
+    </state>
+    <state width="1821" height="191" key="GridCell.Tab.0.bottom/69.37.1851.1043@69.37.1851.1043" timestamp="1593030208191" />
+    <state width="1821" height="191" key="GridCell.Tab.0.center" timestamp="1593030208189">
+      <screen x="69" y="37" width="1851" height="1043" />
+    </state>
+    <state width="1821" height="191" key="GridCell.Tab.0.center/69.37.1851.1043@69.37.1851.1043" timestamp="1593030208189" />
+    <state width="1821" height="191" key="GridCell.Tab.0.left" timestamp="1593030208188">
+      <screen x="69" y="37" width="1851" height="1043" />
+    </state>
+    <state width="1821" height="191" key="GridCell.Tab.0.left/69.37.1851.1043@69.37.1851.1043" timestamp="1593030208188" />
+    <state width="1821" height="191" key="GridCell.Tab.0.right" timestamp="1593030208190">
+      <screen x="69" y="37" width="1851" height="1043" />
+    </state>
+    <state width="1821" height="191" key="GridCell.Tab.0.right/69.37.1851.1043@69.37.1851.1043" timestamp="1593030208190" />
+    <state x="369" y="175" key="SettingsEditor" timestamp="1592651911742">
+      <screen x="69" y="37" width="1851" height="1043" />
+    </state>
+    <state x="369" y="175" key="SettingsEditor/69.37.1851.1043@69.37.1851.1043" timestamp="1592651911742" />
+  </component>
+</project>
