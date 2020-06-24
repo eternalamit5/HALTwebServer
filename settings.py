@@ -1,0 +1,10 @@
+MONGODB_URI = "mongodb://localhost:27017/us"
+MQTT_CLIENT_ENABLE = True
+MQTT_BROKER_URL = 'localhost'
+MQTT_BROKER_PORT = 1883
+MQTT_BROKER_USR_NAME = ""
+MQTT_BROKER_PASSWORD = ""
+DEVICE_FOLDER_PATH = "/devices/configuration/"
+EMAIL_ENABLE = True
+MAIL_SERVER = ''
+MAIL_PORT = 465

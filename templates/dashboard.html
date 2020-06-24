@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block style %}
+<link href="{{ url_for('static', filename='dashboard.css') }}" rel="stylesheet">
+{% endblock %}
+
+
+{% block nav_content %}
+<div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="/about">About <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link" href="/device_config">Device Configuration</a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link active" href="/device_status">Device Status</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/mqtt/client/app">MQTT Client</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/logout">Logout</a>
+        </li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block content %}
+  <div class="form-group form-group-lg">
+      <form action="" method="post">
+          <br><h5 class="panel-title">Device Information</h5>
+          <div class="form-group row">
+              <div class="col-sm">
+                    {{ form.device_uuid.label }}
+                    {{ form.device_uuid}}
+              </div>
+          </div>
+
+          <br><h5 class="panel-title">Add Dashboard</h5>
+          <div class="form-group row">
+              <div class="col-sm-5">
+                    {{ form.add_dashboard_name.label }}
+                    <d style="padding-left:1em;" > </d>
+                    {{ form.add_dashboard_name()}}
+              </div>
+              <div class="col-sm-5">
+                    {{ form.add_dashboard_url.label }}
+                    <d style="padding-left:1em;" > </d>
+                    {{ form.add_dashboard_url()}}
+              </div>
+              <div class="col-sm-2">
+                  {{ form.add_dashboard()}}
+              </div>
+          </div>
+
+          <br><h5 class="panel-title">Remove Dashboard</h5>
+          <div class="form-group row">
+              <div class="col-sm-5">
+                    {{ form.rm_select_dashboard.label }}
+                    <d style="padding-left:1em;" > </d>
+                    {{ form.rm_select_dashboard()}}
+              </div>
+              <div class="col-sm-2">
+                  {{ form.rm_dashboard()}}
+              </div>
+          </div>
+
+          <br><h5 class="panel-title">View Dashboard</h5>
+          <div class="form-group row">
+              <div class="col-sm-5">
+                    {{ form.select_dashboard.label }}
+                    <d style="padding-left:1em;" > </d>
+                    {{ form.select_dashboard()}}
+              </div>
+              <div class="col-sm-2">
+                    {{ form.view_dashboard()}}
+              </div>
+          </div>
+            {% if show %}
+            <div class="form-group row">
+               <iframe
+                src= {{show_url}}
+                width="1200" height="450" frameborder="0">
+              </iframe>
+            </div>
+          {% endif %}
+        </form>
+
+</div>
+{% endblock %}

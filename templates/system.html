@@ -1,0 +1,333 @@
+{% extends "base.html" %}
+
+{% block style %}
+<link href="{{ url_for('static', filename='system.css') }}" rel="stylesheet">
+{% endblock %}
+
+
+{% block nav_content %}
+<div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="/about">About <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link active" href="/device_config">Device Configuration</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/device_status">Device Status</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/mqtt/client/app">MQTT Client</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/logout">Logout</a>
+        </li>
+    </ul>
+</div>
+{% endblock %}
+
+
+
+{% block content %}
+
+  <div class="form-group form-group-lg">
+      <form action="" method="post">
+
+          <br><h4><u>Device Properties</u> </h4><br>
+          <div class="form-group row">
+              <div class="col-sm">
+                    {{ form.device_type.label }}
+                    {{ form.device_type }}
+              </div>
+
+              <div class="col-sm">
+                    {{ form.device_uuid.label }}
+                    {{ form.device_uuid(placeholder="Mandatory",size=32) }}
+              </div>
+          </div>
+
+          <div class="form-group row">
+              <div class="col-sm">
+                    {{ form.network_id.label }}
+                    {{ form.network_id(placeholder="Mandatory",size=32) }}
+              </div>
+
+              <div class="col-sm">
+                    {{ form.description.label }}
+                    {{ form.description(placeholder="Mandatory",size=32) }}
+              </div>
+          </div>
+
+          <br><h4><u>UART Settings</u> </h4><br>
+          <div class="form-group row">
+              <div class="col-sm">
+                    {{ form.uart0_en.label() }}
+                    {{ form.uart0_en }}
+              </div>
+
+              <div class="col-sm">
+                    {{ form.uart0_baud.label }}
+                    {{ form.uart0_baud }}
+              </div>
+          </div>
+
+          <div class="form-group row">
+              <div class="col-sm">
+                    {{ form.uart1_en.label() }}
+                    {{ form.uart1_en }}
+              </div>
+
+              <div class="col-sm">
+                    {{ form.uart1_baud.label }}
+                    {{ form.uart1_baud }}
+              </div>
+          </div>
+
+          <div class="form-group row">
+              <div class="col-sm">
+                    {{ form.uart2_en.label() }}
+                    {{ form.uart2_en }}
+              </div>
+
+              <div class="col-sm">
+                    {{ form.uart2_baud.label }}
+                    {{ form.uart2_baud }}
+              </div>
+          </div>
+
+          <br><h4><u>I2C Settings</u> </h4><br>
+          <div class="form-group row">
+              <div class="col-sm">
+                    {{ form.i2c0_en.label }}
+                    {{ form.i2c0_en }}
+              </div>
+
+              <div class="col-sm">
+                    {{ form.i2c0_freq.label }}
+                    {{ form.i2c0_freq }}
+              </div>
+          </div>
+
+          <div class="form-group row">
+              <div class="col-sm">
+                    {{ form.i2c1_en.label }}
+                    {{ form.i2c1_en }}
+              </div>
+
+              <div class="col-sm">
+                    {{ form.i2c1_freq.label }}
+                    {{ form.i2c1_freq }}
+              </div>
+          </div>
+
+          <div class="form-group row">
+              <div class="col-sm">
+                    {{ form.i2c2_en.label }}
+                    {{ form.i2c2_en }}
+              </div>
+
+              <div class="col-sm">
+                    {{ form.i2c2_freq.label }}
+                    {{ form.i2c2_freq }}
+              </div>
+          </div>
+
+          <br><h4><u>SPI Settings</u> </h4><br>
+          <div class="form-group row">
+              <div class="col-sm">
+                    {{ form.hsspi_en.label }}
+                    {{ form.hsspi_en }}
+              </div>
+
+              <div class="col-sm">
+                    {{ form.lsspi_en.label }}
+                    {{ form.lsspi_en }}
+              </div>
+          </div>
+
+          <br><h4><u>WIFI Settings</u> </h4><br>
+          <div class="form-group row">
+              <div class="col-sm">
+                    {{ form.wifi_en.label }}
+                    {{ form.wifi_en }}
+              </div>
+
+              <div class="col-sm">
+                    {{ form.smart_conn_en.label }}
+                    {{ form.smart_conn_en }}
+              </div>
+          </div>
+
+          <div class="form-group row">
+              <div class="col-sm">
+                    {{ form.wifi_reconn.label }}
+                    {{ form.wifi_reconn }}
+              </div>
+          </div>
+
+
+          <br><h4><u>WIFI Router Connection Information </u> </h4><br>
+          <div class="form-group row">
+              <div class="col-sm">
+                    {{ form.ssid1.label }}
+                    {{ form.ssid1(placeholder="Optional",size=32) }}
+              </div>
+
+              <div class="col-sm">
+                    {{ form.password1.label }}
+                    {{ form.password1(placeholder="Optional",size=32) }}
+              </div>
+
+          </div>
+
+          <div class="form-group row">
+              <div class="col-sm">
+                    {{ form.ssid2.label }}
+                    {{ form.ssid2(placeholder="Optional",size=32) }}
+              </div>
+
+              <div class="col-sm">
+                    {{ form.password2.label }}
+                    {{ form.password2(placeholder="Optional",size=32) }}
+              </div>
+          </div>
+
+          <div class="form-group row">
+              <div class="col-sm">
+                    {{ form.ssid3.label }}
+                    {{ form.ssid3(placeholder="Optional",size=32) }}
+              </div>
+              <div class="col-sm">
+                    {{ form.password3.label }}
+                    {{ form.password3(placeholder="Optional",size=32) }}
+              </div>
+          </div>
+
+          <div class="form-group row">
+              <div class="col-sm">
+                    {{ form.ssid4.label }}
+                    {{ form.ssid4(placeholder="Optional",size=32) }}
+              </div>
+              <div class="col-sm">
+                    {{ form.password4.label }}
+                    {{ form.password4(placeholder="Optional",size=32) }}
+              </div>
+          </div>
+
+          <div class="form-group row">
+              <div class="col-sm">
+                    {{ form.ssid5.label }}
+                    {{ form.ssid5(placeholder="Optional",size=32) }}
+              </div>
+              <div class="col-sm">
+                    {{ form.password5.label }}
+                    {{ form.password5(placeholder="Optional",size=32) }}
+              </div>
+          </div>
+
+          <div class="form-group row">
+              <div class="col-sm">
+                    {{ form.ssid6.label }}
+                    {{ form.ssid6(placeholder="Optional",size=32) }}
+              </div>
+              <div class="col-sm">
+                    {{ form.password6.label }}
+                    {{ form.password6(placeholder="Optional",size=32) }}
+              </div>
+          </div>
+
+          <div class="form-group row">
+              <div class="col-sm">
+                    {{ form.ssid7.label }}
+                    {{ form.ssid7(placeholder="Optional",size=32) }}
+              </div>
+              <div class="col-sm">
+                    {{ form.password7.label }}
+                    {{ form.password7(placeholder="Optional",size=32) }}
+              </div>
+          </div>
+
+          <div class="form-group row">
+              <div class="col-sm">
+                    {{ form.ssid8.label }}
+                    {{ form.ssid8(placeholder="Optional",size=32) }}
+              </div>
+              <div class="col-sm">
+                    {{ form.password8.label }}
+                    {{ form.password8(placeholder="Optional",size=32) }}
+              </div>
+          </div>
+
+          <div class="form-group row">
+              <div class="col-sm">
+                    {{ form.ssid9.label }}
+                    {{ form.ssid9(placeholder="Optional",size=32) }}
+              </div>
+              <div class="col-sm">
+                    {{ form.password9.label }}
+                    {{ form.password9(placeholder="Optional",size=32) }}
+              </div>
+          </div>
+
+          <div class="form-group row">
+              <div class="col-sm">
+                    {{ form.ssid10.label }}
+                    {{ form.ssid10(placeholder="Optional",size=32) }}
+              </div>
+              <div class="col-sm">
+                    {{ form.password10.label }}
+                    {{ form.password10(placeholder="Optional",size=32) }}
+              </div>
+          </div>
+
+          <br><h4><u>Status Indicators and Display </u> </h4><br>
+          <div class="form-group row">
+              <div class="col-sm">
+                    {{ form.status_indicator_en.label }}
+                    {{ form.status_indicator_en() }}
+              </div>
+          </div>
+
+         <br><h4><u>Actions on Error and Warning </u> </h4><br>
+          <div class="form-group row">
+              <div class="col-sm">
+                    {{ form.error_major_action.label }}
+                    {{ form.error_major_action() }}
+              </div>
+              <div class="col-sm">
+                    {{ form.error_minor_action.label }}
+                    {{ form.error_minor_action() }}
+              </div>
+          </div>
+
+          <div class="form-group row">
+              <div class="col-sm">
+                    {{ form.warn_major_action.label }}
+                    {{ form.warn_major_action() }}
+              </div>
+              <div class="col-sm">
+                    {{ form.warn_minor_action.label }}
+                    {{ form.warn_minor_action() }}
+              </div>
+          </div>
+
+          <div class="form-group row">
+              <div class="col-sm">
+                    {{ form.std_exception_action.label }}
+                    {{ form.std_exception_action() }}
+              </div>
+          </div>
+
+          <div class="form-group row">
+              <div class="col-xs-1">
+                  <br><p> {{ form.save() }} {{ form.upload() }}</p>
+              </div>
+          </div>
+      </form>
+</div>
+{% endblock %}
+
